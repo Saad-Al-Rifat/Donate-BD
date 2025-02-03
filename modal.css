@@ -1,0 +1,44 @@
+.modal-01 {
+    padding: 45px 45px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition-property: margin-top;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+}
+
+.modal-01 h1 {
+    color: rgb(184, 169, 169);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 13px;
+}
+
+.modal-01 button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: aquamarine;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 300ms;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-01 button:hover {
+    background-color: aqua;
+    scale: 0.95;
+}
+
+.modal-01 button:active {
+    scale: 0.90;
+}
+
+.top-to-bottom {
+    margin-top: 50px;
+}

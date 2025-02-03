@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
     <title>DONATE BANGLADESH</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,29 +20,36 @@
                 <img src="assets/logo.png" alt="donate Bangladesh Logo"><span>Donate Bangladesh</span>
             </div>
             <div class="balance-container">
-                <img src="assets/coin.png" alt="Coin"><div><span>500</span><span>BDT</span></div>
+                <img src="assets/coin.png" alt="Coin">
+                <div><span id="balance">11500</span><span>BDT</span></div>
             </div>
         </nav>
         <div class="donation-history-container">
-            <button>Donation</button>
-            <button>History</button>
+            <button id="d-btn" class="button-zbz active-rout"
+                onclick="activeRoute('donation-btn', 'd-btn')">Donation</button>
+            <button id="h-btn" class="button-zbz rout" onclick="activeRoute('history-btn', 'h-btn')">History</button>
         </div>
     </header>
     <main>
-        <div class="main">
+        <div id="donation-btn" class="main rout-div">
             <div class="card-1">
                 <div class="card-img"><img src="assets/noakhali.png" alt="noakhali Fload Image"></div>
                 <div class="card-content">
                     <div class="how-much-you-donate-container">
-                        <img src="assets/coin.png"><div><span>0</span><span>BDT</span></div>
+                        <img src="assets/coin.png">
+                        <div><span id="coin-1">0</span><span>BDT</span></div>
                     </div>
                     <div>
                         <h2 style="margin-bottom: 5px;">Donate for Flood at Noakhali, Bangladesh</h2>
-                        <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                        <p> The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation will help provide essential supplies and to those affected by this disaster. Every
+                            contribution, big or small, makes difference. Please join us in supporting the relief
+                            efforts and making a positive impact on the lives of those in need.</p>
                     </div>
                     <div class="input-donate">
-                        <div><input type="number" placeholder="Write Donation Amount"></div>
-                        <div><button>Donate Now</button></div>
+                        <div><input id="amount-1" type="number" placeholder="Write Donation Amount"></div>
+                        <div><button class="zbc" onclick="donate('coin-1', 'amount-1')" class="donate-now-btn">Donate
+                                Now</button></div>
                     </div>
                 </div>
             </div>
@@ -47,15 +57,22 @@
                 <div class="card-img"><img src="assets/feni.png" alt="noakhali Fload Image"></div>
                 <div class="card-content">
                     <div class="how-much-you-donate-container">
-                        <img src="assets/coin.png"><div><span>0</span><span>BDT</span></div>
+                        <img src="assets/coin.png">
+                        <div><span id="coin-2">0</span><span>BDT</span></div>
                     </div>
                     <div>
                         <h2 style="margin-bottom: 5px;">Donate for Flood Relief in Feni,Bangladesh</h2>
-                        <p> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                        <p> The recent floods in Feni have devastated local communities, leading to severe disruption
+                            and loss. Your generous donation will help provide immediate aid, including food, clean
+                            water, and medical supplies, to those affected by this calamity. Together, we can offer
+                            crucial support and help rebuild lives in the aftermath of this disaster. Every contribution
+                            counts towards making a real difference. Please consider donating today to assist those in
+                            urgent need.</p>
                     </div>
                     <div class="input-donate">
-                        <div><input type="number" placeholder="Write Donation Amount"></div>
-                        <div><button>Donate Now</button></div>
+                        <div><input id="amount-2" type="number" placeholder="Write Donation Amount"></div>
+                        <div><button class="zbc" onclick="donate('coin-2', 'amount-2')" class="donate-now-btn">Donate
+                                Now</button></div>
                     </div>
                 </div>
             </div>
@@ -63,21 +80,45 @@
                 <div class="card-img"><img src="assets/quota-protest.png" alt="noakhali Fload Image"></div>
                 <div class="card-content">
                     <div class="how-much-you-donate-container">
-                        <img src="assets/coin.png"><div><span>0</span><span>BDT</span></div>
+                        <img src="assets/coin.png">
+                        <div><span id="coin-3">0</span><span>BDT</span></div>
                     </div>
                     <div>
                         <h2 style="margin-bottom: 5px;">Aid for Injured in the Quota Movement</h2>
-                        <p> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                        <p> The recent Quota movement has resulted in numerous injuries and significant hardship for
+                            many individuals. Your support is crucial in providing medical assistance, rehabilitation,
+                            and necessary supplies to those affected. By contributing, you help ensure that injured
+                            individuals receive the care and support they need during this challenging time. Every
+                            donation plays a vital role in alleviating their suffering and aiding in their recovery.
+                            Please consider making a donation to support these brave individuals in their time of need.
+                        </p>
                     </div>
                     <div class="input-donate">
-                        <div><input type="number" placeholder="Write Donation Amount"></div>
-                        <div><button>Donate Now</button></div>
+                        <div><input id="amount-3" type="number" placeholder="Write Donation Amount"></div>
+                        <div><button class="zbc" onclick="donate('coin-3', 'amount-3')" class="donate-now-btn">Donate
+                                Now</button></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="history hidden"></div>
+        <div id="history-btn" class="history hidden rout-div"></div>
     </main>
+    <!-- Extra Items which will not include In main html on the page -->
+    <audio id="audio-file" hidden src="assets/wrong-answer-126515.mp3"></audio>
+    <!-- popup01 Start -->
+     <dialog id="popup-01" class="modal-01 top-to-bottom">
+        <h1>You Don't Have Enough Money</h1>
+        <button id="dialogue-cancel-1">Cancel</button>
+     </dialog>
+    <!-- popup01 End -->
+    <!-- popup02 Start -->
+     <dialog id="popup-02" class="modal-01">
+        <h1>Congrates!</h1>
+        <p>You Have Donated For Humankind Successfuly</p>
+        <button id="dialogue-cancel-2">OK</button>
+     </dialog>
+    <!-- popup02 End -->
     <script src="js/main.js"></script>
 </body>
+
 </html>
